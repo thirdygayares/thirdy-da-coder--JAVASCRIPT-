@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+<body>
+
+    
+    <input type="text" id="int1" onfocus="this.value=''" value="input integer 1"><br><br>
+  
+    <input type="text" id="int2" onfocus="this.value=''"  value="input integer 2">
+
+    <input type="button" onClick="forRaising()" value="Done">
+
+    <p id="raising"></p>
+
+    <script>
+
+
+    class Calculate {
+        constructor(integer1, integer2){
+        this.integer1 = integer1;
+        this.integer2 = integer2;   
+     }
+   
+     getValue(){ //method
+        return this.integer1 ** this.integer2;
+     }
+  }
+
+
+
+
+    function forRaising()  {
+        x = document.getElementById('int1').value;
+        y = document.getElementById('int2').value;
+
+    const tao1 = new Calculate(x,y);
+
+    console.log(tao1.getValue()); //for testing in console
+
+    document.getElementById('raising').innerHTML = tao1.getValue();
+ } 
+ 
+ 
+ </script>
+</body>
+</html>
